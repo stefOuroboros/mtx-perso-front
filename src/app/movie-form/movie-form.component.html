@@ -1,0 +1,35 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="movie.name"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Entrer le nom du film"
+            required #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="text">Réalisateur</label>
+          <input type="text" [(ngModel)]="movie.director"
+            class="form-control"
+            id="director"
+            name="director"
+            placeholder="Entrer le nom du réalisateur"
+            required #director="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="text">Réalisateur</label>
+            <input type="text" [(ngModel)]="movie.poster"
+              class="form-control"
+              id="poster"
+              name="poster"
+              placeholder="Lien externe vers l'affiche du film"
+              required #director="ngModel">
+         </div>
+        <button type="submit" [disabled]="!movieForm.form.valid"
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

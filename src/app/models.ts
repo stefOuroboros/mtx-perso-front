@@ -3,10 +3,6 @@ export class Movie {
   director: string;
   poster: string;
 
-  constructor(params: any) {
-    Object.assign(this, params);
-  }
-
 }
 
 export class MovieFromJson {
